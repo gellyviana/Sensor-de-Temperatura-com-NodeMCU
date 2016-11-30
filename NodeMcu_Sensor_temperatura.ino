@@ -7,7 +7,7 @@ const char* password = "";
 
 const char* host = "www.dweet.io";
 const char* thing  = "Sensor_NodeMCU";
-const char* thing_content = "Temperatura";
+const char* thing_content = "Temperatura &Nome=Clara";
 
 
 unsigned long previousMillis = 0; 
@@ -80,19 +80,19 @@ void loop() {
      
      Serial.print((int)lm35Value);
     // Serial.print((char)176);
-    if(lm35Value <= 31.0)
+    if(lm35Value <= 35.0)
     {
         analogWrite(ledVerde, 77);
-         delay(500);
+         delay(100);
         analogWrite(ledVerde, 0);
-        delay(500);
+        delay(100);
     }
-    else if(lm35Value >=33.0)
+    else if(lm35Value >=37.5)
     {
         analogWrite(ledVermelho, 77);
-        delay(500);
+        delay(100);
         analogWrite(ledVermelho, 0);
-        delay(500);
+        delay(100);
     }
     // Serial.println("C");
    }
@@ -103,6 +103,10 @@ void loop() {
   url += "Temperatura";
   url += "=";
   url += lm35Value;
+  //url += "Nome";
+  //url += "=";
+  //url += "Clara";  
+  
  
   Serial.print("Requesting URL: ");
   Serial.println(url);
