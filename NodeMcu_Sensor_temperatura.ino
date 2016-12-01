@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
 
-const char* ssid     = "IMD CIVT";
+const char* ssid     = "NPITI";
 const char* password = "";
 
 
@@ -58,7 +58,7 @@ void loop() {
      Serial.print("connecting to ");
      Serial.println(host);
  
-  // Use WiFiClient class to create TCP connections
+  
   WiFiClient client;
   const int httpPort = 80;
   if (!client.connect(host, httpPort)) {
@@ -94,9 +94,9 @@ void loop() {
         analogWrite(ledVermelho, 0);
         delay(100);
     }
-    // Serial.println("C");
+   
    }
-  // We now create a URI for the request
+  
   String url = "/dweet/for/";
   url += "Sensor_NodeMCU";
   url += "?";
