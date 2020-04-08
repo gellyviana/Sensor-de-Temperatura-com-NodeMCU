@@ -1,1 +1,2 @@
 # Sensor-de-Temperatura-com-NodeMCU
+Este projeto é pré-requisito para nota parcial da Disciplina de TI e Saúde, ofertado pelo Instituto Metrópole Digital. O projeto visa medir a temperatura dos Recém-Nascidos internados na Unidade de Terapia Intesiva Neonatal, com intuito de minimizar o manuseio em excesso por se tratar de bebês que possuem grande fragilidade e por precisarem de repouso máximo, implicando diretamente em melhor prognóstico do RN.
